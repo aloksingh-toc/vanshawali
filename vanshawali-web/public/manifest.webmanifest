@@ -1,0 +1,20 @@
+{
+  "name": "वंशावली — ग्राम इब्राहिमाबाद",
+  "short_name": "वंशावली",
+  "description": "Family tree & community platform for Gram Ibrahimabad, Ballia",
+  "lang": "hi",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F1E7CF",
+  "theme_color": "#232E52",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    font-family: "Noto Sans Devanagari", "Nirmala UI", sans-serif;
+    color: #26314f;
+    background-color: #f1e7cf;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  ::selection {
+    background: rgba(179, 64, 42, 0.18);
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(38, 49, 79, 0.28);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  .panel-surface {
+    background: rgba(252, 248, 238, 0.86);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(38, 49, 79, 0.1);
+  }
+
+  .gilt-divider {
+    height: 2px;
+    width: 38px;
+    background: linear-gradient(90deg, transparent, #b3402a, transparent);
+    border-radius: 999px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ---- D3 family tree ---- */
+.tree-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  cursor: grab;
+}
+.tree-svg:active {
+  cursor: grabbing;
+}
+.tree-node rect.box {
+  fill: #fcf8ee;
+  stroke: #26314f;
+  stroke-width: 1.4;
+}
+.tree-node.q rect.box {
+  fill: #f8efd8;
+}
+.tree-node.u rect.box {
+  stroke-dasharray: 5 3;
+  stroke: rgba(38, 49, 79, 0.75);
+}
+.tree-node.x rect.box {
+  fill: #f1e7d2;
+  stroke: rgba(38, 49, 79, 0.55);
+}
+.tree-node.hl rect.box {
+  stroke: #b3402a;
+  stroke-width: 2.6;
+}
+.tree-node rect.box.hit {
+  stroke: #b3402a;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 5px rgba(179, 64, 42, 0.55));
+}
+.tree-node text.name {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  fill: #26314f;
+}
+.tree-node.x text.name {
+  fill: rgba(38, 49, 79, 0.7);
+}
+.tree-node.hl text.name {
+  font-weight: 800;
+}
+.tree-node tspan.q {
+  fill: #a4731b;
+  font-weight: 800;
+}
+.tree-node text.sub {
+  font-size: 9.5px;
+  fill: rgba(38, 49, 79, 0.62);
+}
+.tree-node text.sub.lawald {
+  fill: #b3402a;
+  font-weight: 700;
+}
+.tree-badge rect {
+  fill: #232e52;
+}
+.tree-badge text {
+  font-size: 9.5px;
+  font-weight: 700;
+  fill: #f2e9d4;
+}
+.tree-link {
+  fill: none;
+  stroke: rgba(38, 49, 79, 0.4);
+  stroke-width: 1.4px;
+}
+.tree-link.hl {
+  stroke: #b3402a;
+  stroke-opacity: 0.8;
+  stroke-width: 2.4px;
+}
+
+#tree-print-root {
+  display: none;
+}
+@media print {
+  body > *:not(#tree-print-root) {
+    display: none !important;
+  }
+  #tree-print-root {
+    display: block !important;
+    background: #fff;
+  }
+  #tree-print-root .tree-svg {
+    width: auto;
+    height: auto;
+  }
+}

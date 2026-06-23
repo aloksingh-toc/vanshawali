@@ -1,0 +1,25 @@
+# Java / Maven
+vanshawali-api/target/
+vanshawali-api/uploads/
+vanshawali-api/backend.log
+*.log
+
+# Real family-tree data (private — not for public repo)
+vanshawali-api/src/main/resources/data/tree-seed.json
+vanshawali-editor_2.html
+
+# Node / Vite
+vanshawali-web/node_modules/
+vanshawali-web/dist/
+
+# Root uploads
+uploads/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

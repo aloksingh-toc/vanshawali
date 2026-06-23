@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="96" fill="#232E52"/>
+  <circle cx="256" cy="196" r="120" fill="#2C3A66"/>
+  <circle cx="256" cy="196" r="120" fill="#A4731B" opacity="0.12"/>
+  <!-- temple shikhara -->
+  <path d="M196 360 L196 250 Q256 150 316 250 L316 360 Z" fill="#1A2340"/>
+  <path d="M214 360 L214 262 Q256 184 298 262 L298 360 Z" fill="#141B30"/>
+  <circle cx="256" cy="150" r="14" fill="#B3402A"/>
+  <rect x="250" y="120" width="12" height="32" rx="4" fill="#B3402A"/>
+  <!-- doorway -->
+  <path d="M236 360 L236 300 Q256 272 276 300 L276 360 Z" fill="#E9C268"/>
+  <!-- ground -->
+  <rect x="120" y="360" width="272" height="44" rx="10" fill="#A4731B"/>
+  <!-- script mark -->
+  <text x="256" y="462" text-anchor="middle" font-family="'Tiro Devanagari Hindi','Noto Sans Devanagari',serif" font-size="64" font-weight="700" fill="#F2E9D4">वंश</text>
+</svg>
