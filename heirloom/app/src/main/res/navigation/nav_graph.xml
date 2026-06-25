@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <!-- Home -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.meragaw.vanshawali.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_notifications"
+            app:destination="@id/nav_notifications"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home_to_tree"
+            app:destination="@id/nav_tree" />
+    </fragment>
+
+    <!-- Family Tree -->
+    <fragment
+        android:id="@+id/nav_tree"
+        android:name="com.meragaw.vanshawali.ui.tree.FamilyTreeFragment"
+        android:label="Family Tree">
+        <action
+            android:id="@+id/action_tree_to_profile"
+            app:destination="@id/nav_member_profile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Member Profile (pushed from Tree, Search, Home) -->
+    <fragment
+        android:id="@+id/nav_member_profile"
+        android:name="com.meragaw.vanshawali.ui.profile.MemberProfileFragment"
+        android:label="Profile">
+        <argument
+            android:name="memberId"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Photos -->
+    <fragment
+        android:id="@+id/nav_photos"
+        android:name="com.meragaw.vanshawali.ui.photos.PhotosFragment"
+        android:label="Photos" />
+
+    <!-- Search -->
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.meragaw.vanshawali.ui.search.SearchFragment"
+        android:label="Search">
+        <action
+            android:id="@+id/action_search_to_profile"
+            app:destination="@id/nav_member_profile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Profile tab (current user) -->
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.meragaw.vanshawali.ui.profile.ProfileFragment"
+        android:label="My Profile" />
+
+    <!-- Notifications (pushed, no tab) -->
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.meragaw.vanshawali.ui.notifications.NotificationsFragment"
+        android:label="Notifications" />
+
+</navigation>

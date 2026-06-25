@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Heirloom — Color State Selectors
+  Place each <selector> in its own file in res/color/ or keep here for reference
+-->
+<resources>
+
+    <!--
+      res/color/tab_selector.xml
+      Use as: app:itemIconTint="@color/tab_selector"
+    -->
+    <!--
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:color="@color/tab_active" android:state_checked="true"/>
+        <item android:color="@color/tab_inactive"/>
+    </selector>
+    -->
+
+    <!--
+      res/color/chip_background_selector.xml
+    -->
+    <!--
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:color="@color/heirloom_on_surface" android:state_checked="true"/>
+        <item android:color="@color/heirloom_surface"/>
+    </selector>
+    -->
+
+    <!--
+      res/color/chip_text_selector.xml
+    -->
+    <!--
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:color="@color/heirloom_background" android:state_checked="true"/>
+        <item android:color="@color/heirloom_on_surface_muted"/>
+    </selector>
+    -->
+
+</resources>

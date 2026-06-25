@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/heirloom_surface_alt">
+
+    <!-- ===== HEADER ===== -->
+    <LinearLayout
+        android:id="@+id/tree_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="14dp"
+        android:background="@color/heirloom_surface_alt"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tree_title"
+                android:textSize="23sp"
+                android:textColor="@color/heirloom_on_surface"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_tree_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Hartwell · 4 generations"
+                android:textSize="12sp"
+                android:textColor="@color/heirloom_on_surface_faint"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Search icon -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_tree_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="9dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/heirloom_surface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/heirloom_border_strong"
+            app:strokeWidth="1dp">
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search"
+                android:contentDescription="@string/cd_search"
+                app:tint="@color/heirloom_on_surface_medium" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Filter icon -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btn_tree_filter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/heirloom_surface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/heirloom_border_strong"
+            app:strokeWidth="1dp">
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_filter"
+                android:contentDescription="@string/cd_filter"
+                app:tint="@color/heirloom_on_surface_medium" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- ===== TREE CANVAS (custom scrollable + zoomable view) ===== -->
+    <!--
+        Replace with your package name: com.yourpackage.ui.view.FamilyTreeView
+        This custom View handles:
+          - GestureDetector for pan
+          - ScaleGestureDetector for pinch-zoom
+          - Canvas drawing: dot-grid bg, connector lines, avatar circles, labels
+          - Generation pill labels
+          - Tap on node → callback to open MemberProfileFragment
+    -->
+    <com.meragaw.vanshawali.ui.view.FamilyTreeView
+        android:id="@+id/family_tree_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tree_header"
+        app:layout_constraintBottom_toTopOf="@id/zoom_controls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ===== ZOOM CONTROLS (bottom-left) ===== -->
+    <LinearLayout
+        android:id="@+id/zoom_controls"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_card_surface_bordered"
+        android:clipToOutline="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_zoom_in"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_zoom_in"
+            app:tint="@color/heirloom_on_surface_medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/heirloom_border" />
+
+        <ImageButton
+            android:id="@+id/btn_zoom_out"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_remove"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_zoom_out"
+            app:tint="@color/heirloom_on_surface_medium" />
+
+    </LinearLayout>
+
+    <!-- ===== FAB Add Member (bottom-right) ===== -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_member"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="@string/cd_add"
+        app:backgroundTint="@color/heirloom_primary"
+        app:tint="@color/white"
+        app:elevation="10dp"
+        app:fabCustomSize="56dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Heirloom.FAB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
