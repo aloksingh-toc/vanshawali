@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Heirloom — Family Tree App
+  Theme & Style Definitions (Material3 base)
+
+  Add to your app/build.gradle:
+    implementation 'com.google.android.material:material:1.11.0'
+
+  Add to your AndroidManifest.xml:
+    android:theme="@style/Theme.Heirloom"
+-->
+<resources>
+
+    <!-- ======================================================
+         BASE APP THEME
+    ====================================================== -->
+    <style name="Theme.Heirloom" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/heirloom_primary</item>
+        <item name="colorPrimaryVariant">@color/heirloom_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Background / Surface -->
+        <item name="android:colorBackground">@color/heirloom_background</item>
+        <item name="colorSurface">@color/heirloom_surface</item>
+        <item name="colorOnSurface">@color/heirloom_on_surface</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/heirloom_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/heirloom_surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- Typography — use Lora (serif) for display, Mulish for UI -->
+        <item name="fontFamily">@font/mulish_regular</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+
+        <!-- Bottom sheets (Add Member / Add Memory) get rounded top corners -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Heirloom.BottomSheet</item>
+    </style>
+
+    <!-- ======================================================
+         TYPOGRAPHY STYLES
+    ====================================================== -->
+
+    <!-- Display / Hero — Lora Serif 600 -->
+    <style name="TextAppearance.Heirloom.Hero" parent="android:TextAppearance">
+        <item name="fontFamily">@font/lora_semibold</item>
+        <item name="android:fontFamily">@font/lora_semibold</item>
+        <item name="android:textSize">@dimen/text_hero</item>
+        <item name="android:textColor">@color/heirloom_on_surface</item>
+        <item name="android:lineSpacingMultiplier">1.12</item>
+    </style>
+
+    <!-- Section title large — Lora 600 -->
+    <style name="TextAppearance.Heirloom.TitleLarge" parent="android:TextAppearance">
+        <item name="fontFamily">@font/lora_semibold</item>
+        <item name="android:fontFamily">@font/lora_semibold</item>
+        <item name="android:textSize">@dimen/text_title_lg</item>
+        <item name="android:textColor">@color/heirloom_on_surface</item>
+    </style>
+
+    <!-- Section title medium — Lora 600 -->
+    <style name="TextAppearance.Heirloom.TitleMedium" parent="android:TextAppearance">
+        <item name="fontFamily">@font/lora_semibold</item>
+        <item name="android:fontFamily">@font/lora_semibold</item>
+        <item name="android:textSize">@dimen/text_title_md</item>
+        <item name="android:textColor">@color/heirloom_on_surface</item>
+    </style>
+
+    <!-- Body text — Mulish 400/600 -->
+    <style name="TextAppearance.Heirloom.Body" parent="android:TextAppearance">
+        <item name="fontFamily">@font/mulish_regular</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">@dimen/text_body_md</item>
+        <item name="android:textColor">@color/heirloom_on_surface</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+    </style>
+
+    <!-- Small body — Mulish -->
+    <style name="TextAppearance.Heirloom.BodySmall" parent="android:TextAppearance">
+        <item name="fontFamily">@font/mulish_regular</item>
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textSize">@dimen/text_body_sm</item>
+        <item name="android:textColor">@color/heirloom_on_surface_medium</item>
+    </style>
+
+    <!-- Labels — Mulish 700 uppercase -->
+    <style name="TextAppearance.Heirloom.Label" parent="android:TextAppearance">
+        <item name="fontFamily">@font/mulish_bold</item>
+        <item name="android:fontFamily">@font/mulish_bold</item>
+        <item name="android:textSize">@dimen/text_label_md</item>
+        <item name="android:textColor">@color/heirloom_on_surface_subtle</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Italic bio quote — Lora Italic -->
+    <style name="TextAppearance.Heirloom.Quote" parent="android:TextAppearance">
+        <item name="fontFamily">@font/lora_medium_italic</item>
+        <item name="android:fontFamily">@font/lora_medium_italic</item>
+        <item name="android:textSize">@dimen/text_body_md</item>
+        <item name="android:textColor">@color/heirloom_on_surface_medium</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:lineSpacingMultiplier">1.6</item>
+    </style>
+
+    <!-- ======================================================
+         BUTTON STYLES
+    ====================================================== -->
+
+    <!-- Primary filled button -->
+    <style name="Widget.Heirloom.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/heirloom_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_label_lg</item>
+        <item name="android:minHeight">@dimen/button_height_primary</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Secondary outlined button -->
+    <style name="Widget.Heirloom.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/heirloom_on_surface_medium</item>
+        <item name="strokeColor">@color/heirloom_border_strong</item>
+        <item name="android:backgroundTint">@color/heirloom_surface</item>
+        <item name="android:textSize">@dimen/text_label_lg</item>
+        <item name="android:minHeight">@dimen/button_height_primary</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+    </style>
+
+    <!-- ======================================================
+         CARD STYLES
+    ====================================================== -->
+
+    <!-- Standard surface card -->
+    <style name="Widget.Heirloom.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/heirloom_surface</item>
+        <item name="strokeColor">@color/heirloom_border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">@dimen/radius_card</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <!-- Hero/featured card (terracotta) -->
+    <style name="Widget.Heirloom.Card.Hero" parent="Widget.Heirloom.Card">
+        <item name="cardBackgroundColor">@color/heirloom_primary</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardCornerRadius">@dimen/radius_hero_card</item>
+    </style>
+
+    <!-- Notification highlighted card -->
+    <style name="Widget.Heirloom.Card.Notification" parent="Widget.Heirloom.Card">
+        <item name="cardBackgroundColor">@color/heirloom_birthday_bg</item>
+        <item name="strokeColor">@color/heirloom_birthday_border</item>
+        <item name="cardCornerRadius">@dimen/radius_large</item>
+        <item name="android:layout_marginStart">@dimen/space_12</item>
+        <item name="android:layout_marginEnd">@dimen/space_12</item>
+    </style>
+
+    <!-- ======================================================
+         BOTTOM NAVIGATION
+    ====================================================== -->
+    <style name="Widget.Heirloom.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/heirloom_surface</item>
+        <item name="itemIconTint">@color/tab_selector</item>
+        <item name="itemTextColor">@color/tab_selector</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <!-- ======================================================
+         SEARCH FIELD
+    ====================================================== -->
+    <style name="Widget.Heirloom.SearchField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/heirloom_surface</item>
+        <item name="boxStrokeColor">@color/heirloom_primary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_medium</item>
+        <item name="android:minHeight">@dimen/search_field_height</item>
+    </style>
+
+    <!-- ======================================================
+         FAB
+    ====================================================== -->
+    <style name="Widget.Heirloom.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/heirloom_primary</item>
+        <item name="tint">@color/white</item>
+        <item name="fabCustomSize">@dimen/fab_size</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Heirloom.FAB</item>
+        <item name="elevation">10dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Heirloom.FAB" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_fab</item>
+    </style>
+
+    <!-- ======================================================
+         FILTER / SEGMENTED CHIPS
+    ====================================================== -->
+    <style name="Widget.Heirloom.Chip.Filter" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_background_selector</item>
+        <item name="chipStrokeColor">@color/heirloom_border_strong</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">@dimen/radius_chip</item>
+        <item name="android:textSize">@dimen/text_label_md</item>
+    </style>
+
+    <!-- ======================================================
+         BOTTOM SHEETS
+    ====================================================== -->
+    <style name="ThemeOverlay.Heirloom.BottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Heirloom.BottomSheet</item>
+    </style>
+
+    <style name="Widget.Heirloom.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Heirloom.BottomSheet</item>
+        <item name="backgroundTint">@color/heirloom_surface</item>
+    </style>
+
+    <style name="ShapeAppearance.Heirloom.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/radius_large</item>
+        <item name="cornerSizeTopRight">@dimen/radius_large</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- Form field inside bottom sheets -->
+    <style name="Widget.Heirloom.TextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/heirloom_surface</item>
+        <item name="boxStrokeColor">@color/heirloom_primary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_medium</item>
+    </style>
+
+</resources>

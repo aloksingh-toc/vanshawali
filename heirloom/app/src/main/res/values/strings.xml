@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Heirloom</string>
+
+    <!-- Home -->
+    <string name="home_greeting_prefix">GOOD MORNING,</string>
+    <string name="home_family_title">The %1$s Family</string>
+    <string name="home_upcoming_birthday">UPCOMING BIRTHDAY</string>
+    <string name="home_birthday_cta">Send your wishes</string>
+    <string name="home_stat_members">Members</string>
+    <string name="home_stat_generations">Generations</string>
+    <string name="home_stat_photos">Photos</string>
+    <string name="home_your_tree">Your tree</string>
+    <string name="home_open_tree">Open</string>
+    <string name="home_recently_added">Recently added</string>
+    <string name="home_add_member">Add</string>
+    <string name="home_on_this_day">On this day</string>
+
+    <!-- Tree -->
+    <string name="tree_title">Family Tree</string>
+    <string name="tree_subtitle">%1$s · %2$d generations</string>
+    <string name="tree_label_grandparents">GRANDPARENTS</string>
+    <string name="tree_label_children">CHILDREN</string>
+    <string name="tree_label_grandchildren">GRANDCHILDREN</string>
+    <string name="tree_label_great_grandchildren">GREAT-GRANDCHILDREN</string>
+    <string name="tree_you_suffix">· You</string>
+
+    <!-- Profile -->
+    <string name="profile_label_spouse">SPOUSE</string>
+    <string name="profile_label_children">CHILDREN</string>
+    <string name="profile_label_grandchildren">GRANDCHILDREN</string>
+    <string name="profile_label_maiden_name">MAIDEN NAME</string>
+    <string name="profile_action_message">Message</string>
+    <string name="profile_action_add_memory">Add memory</string>
+    <string name="profile_about_title">About</string>
+    <string name="profile_family_title">Immediate family</string>
+    <string name="profile_photos_title">Photos</string>
+    <string name="profile_see_all_photos">See all %1$d</string>
+    <string name="profile_role_spouse">Spouse</string>
+    <string name="profile_role_son">Son</string>
+    <string name="profile_role_daughter">Daughter</string>
+    <string name="profile_role_grandson">Grandson</string>
+    <string name="profile_role_granddaughter">Granddaughter</string>
+    <string name="profile_overflow_edit">Edit</string>
+    <string name="profile_overflow_share">Share</string>
+    <string name="profile_overflow_delete">Delete</string>
+
+    <!-- Photos -->
+    <string name="photos_title">Photos</string>
+    <string name="photos_filter_all">All</string>
+    <string name="photos_filter_albums">Albums</string>
+    <string name="photos_filter_people">People</string>
+
+    <!-- Search -->
+    <string name="search_title">Search family</string>
+    <string name="search_hint">Search by name…</string>
+    <string name="search_filter_all">All</string>
+    <string name="search_filter_living">Living</string>
+    <string name="search_filter_gen2">Gen 2</string>
+    <string name="search_filter_surname">Surname</string>
+    <string name="search_results_count">%1$d RESULTS</string>
+
+    <!-- Notifications -->
+    <string name="notif_title">Notifications</string>
+    <string name="notif_read_all">Read all</string>
+    <string name="notif_section_today">TODAY</string>
+    <string name="notif_section_earlier">EARLIER</string>
+
+    <!-- Tab bar labels -->
+    <string name="tab_home">Home</string>
+    <string name="tab_tree">Tree</string>
+    <string name="tab_photos">Photos</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_profile">Profile</string>
+
+    <!-- Generic actions -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_send">Send</string>
+
+    <!-- Add member sheet -->
+    <string name="add_member_title">Add Family Member</string>
+    <string name="add_member_first_name">First name</string>
+    <string name="add_member_last_name">Last name</string>
+    <string name="add_member_birth_date">Birth date (optional)</string>
+    <string name="add_member_birth_place">Birthplace (optional)</string>
+    <string name="add_member_bio">Short note (optional)</string>
+    <string name="add_member_relation_label">RELATIONSHIP</string>
+    <string name="relation_child">Child</string>
+    <string name="relation_parent">Parent</string>
+    <string name="relation_spouse">Spouse</string>
+    <string name="relation_sibling">Sibling</string>
+    <string name="add_member_first_name_required">First name is required</string>
+    <string name="add_member_added_toast">Added %1$s to the family tree</string>
+
+    <!-- Add memory sheet -->
+    <string name="add_memory_title">Add a Memory</string>
+    <string name="add_memory_caption">Caption</string>
+    <string name="add_memory_caption_hint">What\'s this memory about?</string>
+    <string name="add_memory_date">Date (optional)</string>
+    <string name="add_memory_photo_hint">Tap to attach a photo</string>
+    <string name="add_memory_caption_required">A caption is required</string>
+    <string name="add_memory_added_toast">Memory added</string>
+
+    <!-- Compose message -->
+    <string name="compose_message_title">Message %1$s</string>
+    <string name="compose_message_hint">Write a message…</string>
+    <string name="compose_message_required">Write a message before sending</string>
+    <string name="compose_message_sent_toast">Message sent to %1$s</string>
+
+    <!-- My Profile tab -->
+    <string name="my_profile_title">My Profile</string>
+    <string name="my_profile_role">You · Family member</string>
+    <string name="my_profile_section_account">ACCOUNT</string>
+    <string name="my_profile_section_family">FAMILY</string>
+    <string name="my_profile_section_about">ABOUT</string>
+    <string name="my_profile_edit">Edit my profile</string>
+    <string name="my_profile_notifications">Notification settings</string>
+    <string name="my_profile_invite">Invite a family member</string>
+    <string name="my_profile_manage_tree">Manage family tree</string>
+    <string name="my_profile_about">About Heirloom</string>
+    <string name="my_profile_help">Help &amp; feedback</string>
+    <string name="my_profile_sign_out">Sign out</string>
+
+    <!-- Content descriptions (accessibility) -->
+    <string name="cd_notification_bell">Notifications</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_more_options">More options</string>
+    <string name="cd_add">Add</string>
+    <string name="cd_search">Search</string>
+    <string name="cd_filter">Filter</string>
+    <string name="cd_zoom_in">Zoom in</string>
+    <string name="cd_zoom_out">Zoom out</string>
+    <string name="cd_member_avatar">Profile photo of %1$s</string>
+    <string name="cd_unread_dot">Unread notification</string>
+</resources>

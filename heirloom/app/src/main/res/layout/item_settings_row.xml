@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/space_16"
+    android:paddingEnd="@dimen/space_16"
+    android:paddingTop="@dimen/space_14"
+    android:paddingBottom="@dimen/space_14">
+
+    <ImageView
+        android:id="@+id/iv_settings_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:tint="@color/heirloom_on_surface_medium"
+        android:src="@drawable/ic_tab_profile" />
+
+    <TextView
+        android:id="@+id/tv_settings_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/space_14"
+        android:textAppearance="@style/TextAppearance.Heirloom.Body"
+        tools:text="Edit my profile" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:tint="@color/heirloom_on_surface_subtle"
+        android:src="@drawable/ic_chevron_right" />
+
+</LinearLayout>

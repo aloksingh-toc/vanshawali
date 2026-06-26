@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- ===================== PRIMARY PALETTE ===================== -->
+    <color name="heirloom_primary">#FFB65F3F</color>
+    <color name="heirloom_primary_dark">#FF8C4A33</color>
+    <color name="heirloom_primary_light">#FFF2E6D6</color>
+    <color name="heirloom_primary_container">#FFFBF3EA</color>
+
+    <!-- Espresso — text -->
+    <color name="heirloom_on_surface">#FF33271E</color>
+    <color name="heirloom_on_surface_medium">#FF5B4A3C</color>
+    <color name="heirloom_on_surface_muted">#FF7E6E5E</color>
+    <color name="heirloom_on_surface_faint">#FF9A8978</color>
+    <color name="heirloom_on_surface_subtle">#FFA4937F</color>
+
+    <!-- Cream — backgrounds -->
+    <color name="heirloom_background">#FFF4ECE1</color>
+    <color name="heirloom_surface">#FFFBF5EC</color>
+    <color name="heirloom_surface_alt">#FFEFE7DA</color>
+
+    <!-- Borders -->
+    <color name="heirloom_border">#FFECE1D2</color>
+    <color name="heirloom_border_strong">#FFE2D5C4</color>
+    <color name="heirloom_border_accent">#FFF0E2CF</color>
+
+    <!-- Tree canvas -->
+    <color name="heirloom_tree_dot">#FFDACBB6</color>
+
+    <!-- ===================== AVATAR PALETTE ===================== -->
+    <color name="avatar_slate">#FF6E7E86</color>
+    <color name="avatar_terracotta">#FFB65F3F</color>
+    <color name="avatar_rust">#FF97614F</color>
+    <color name="avatar_olive">#FF6E7253</color>
+    <color name="avatar_amber">#FFB7853C</color>
+
+    <!-- ===================== SEMANTIC ===================== -->
+    <color name="heirloom_birthday_bg">#FFFBF3EA</color>
+    <color name="heirloom_birthday_border">#FFF0E2CF</color>
+    <color name="heirloom_unread_dot">#FFB65F3F</color>
+    <color name="heirloom_love_heart">#FFC98A88</color>
+
+    <!-- ===================== TAB BAR ===================== -->
+    <color name="tab_active">#FFB65F3F</color>
+    <color name="tab_inactive">#FFA89787</color>
+
+    <!-- ===================== DESTRUCTIVE ===================== -->
+    <color name="heirloom_destructive">#FFA13D3D</color>
+
+    <!-- ===================== DARK BEZEL ===================== -->
+    <color name="device_bezel">#FF241C16</color>
+
+</resources>
